@@ -1,0 +1,23 @@
+$color-white: #ffffff;
+$color-black: #000000;
+
+.btn {
+  z-index: 5;
+  height: 30px;
+  width: 270px;
+  border-radius: 0;
+  border: $color-white;
+  background: $color-white;
+
+  //   background-image: linear-gradient($color-black, $color-black);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  transition: background-size 0.5s, color 0.5s;
+
+  &:hover {
+    color: $color-white;
+    background-size: 100% 100%;
+    box-shadow: 0 10px 15px rgba(150, 149, 149, 0.16);
+  }
+}

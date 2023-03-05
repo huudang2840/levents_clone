@@ -1,0 +1,33 @@
+$color-white: #ffffff;
+$color-black: #000000;
+
+@font-face {
+  font-family: SVNFuturaLight;
+  src: url("./fonts/00294-SFUFuturaLight.TTF");
+}
+@font-face {
+  font-family: SVNFuturaBold;
+  src: url("./fonts/SFUFuturaBold.TTF");
+}
+@font-face {
+  font-family: SVNFuturaRegular;
+  src: url("./fonts/SFUFuturaRegular.TTF");
+}
+@font-face {
+  font-family: SVNFuturaHeavy;
+  src: url("./fonts/SFUFuturaHeavy.TTF");
+}
+i {
+  color: $color-white;
+}
+
+* {
+  font-family: SVNFuturaLight;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  margin: 0 0;
+  word-spacing: 0px;
+  text-decoration: none;
+  color: $color-black;
+}
