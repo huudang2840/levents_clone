@@ -10,8 +10,8 @@ function BannerVideo() {
       <video
         className="banner__video"
         src={vdBanner}
-        loop="true"
-        autoplay="autoplay"
+        loop={true}
+        autoPlay="autoplay"
         controls
         muted
       />

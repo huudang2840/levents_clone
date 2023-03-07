@@ -4,7 +4,7 @@ import Button from "../Button/Button";
 import blackTeeFront from "../../img/products/shirt/black-tee-front.jpeg";
 import blackTeeBack from "../../img/products/shirt/black-tee-back.jpeg";
 
-function Products(props) {
+function Products() {
   return (
     <div className="products">
       <div className="products__item">

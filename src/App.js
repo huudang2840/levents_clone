@@ -4,6 +4,8 @@ import Footer from "./Components/Footer/Footer";
 import Banner from "./Components/Banner/Banner";
 import Products from "./Components/Products/Products";
 import BannerVideo from "./Components/Banner/BannerVideo";
+import Outfit from "./Components/Outfit/Outfit";
+import Contact from "./Components/Contact/Contact";
 
 function App() {
   return (
@@ -12,7 +14,8 @@ function App() {
       <Banner />
       <Products />
       <BannerVideo />
-
+      <Outfit />
+      <Contact />
       <Footer />
     </div>
   );

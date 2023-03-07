@@ -22,15 +22,21 @@ $color-gray: #858585;
 }
 
 .header {
-  display: block;
-  position: relative;
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+
   width: 100%;
   z-index: 100;
   color: $color-white;
   overflow: visible;
 
-  &__banner {
+  &:hover .header__bottom {
     display: flex;
+  }
+
+  &__banner {
+    display: none;
     height: 37px;
     background-color: $color-black;
     line-height: 37px;
@@ -104,7 +110,8 @@ $color-gray: #858585;
   }
 
   &__bottom {
-    display: flex;
+    display: none;
+    // display: flex;
     height: 50px;
     position: relative;
     align-items: center;
@@ -166,9 +173,9 @@ $color-gray: #858585;
           &:hover > .line {
             transform: scaleX(0.9);
           }
-          // &:hover > &__second {
-          //   display: block;
-          // }
+          &:hover > .header__bottom__item__second {
+            display: block;
+          }
         }
       }
     }
@@ -202,6 +209,10 @@ $color-gray: #858585;
       margin-bottom: 2px;
     }
   }
+}
+
+.active {
+  display: flex;
 }
 
 @keyframes pulse {

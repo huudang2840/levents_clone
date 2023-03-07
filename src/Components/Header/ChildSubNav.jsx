@@ -35,7 +35,7 @@ function ChildSubNav(props) {
       myArray = [];
       break;
   }
-  console.log(myArray);
+  // console.log(myArray);
   return (
     <ul className="header__bottom__item__second" style={{ left: "105%", top: "-200%" }}>
       {myArray.map((s) => (

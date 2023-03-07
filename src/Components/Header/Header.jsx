@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Header.scss";
 import logo from "../../img/header/logo.png";
 import icVN from "../../img/header/ic-vn.svg";
@@ -49,9 +49,33 @@ const listTitle = [
 ];
 
 const Header = () => {
+  const [showBanner, setShowBanner] = useState(true);
+  const [showBottom, setShowBottom] = useState(true);
+  let lastScrollPosition = window.pageYOffset;
+
+  const scrollShowBanner = () => {
+    let currentScrollPosition = window.pageYOffset;
+    if (lastScrollPosition > currentScrollPosition) {
+      setShowBanner(true);
+    } else {
+      setShowBanner(false);
+    }
+    lastScrollPosition = currentScrollPosition;
+  };
+  const scrollShowBottom = () => {
+    if (window.scrollY > 80) {
+      setShowBottom(false);
+    } else {
+      setShowBottom(true);
+    }
+  };
+
+  window.addEventListener("scroll", scrollShowBanner);
+  window.addEventListener("scroll", scrollShowBottom);
+
   return (
     <div className="header">
-      <div className="header__banner">
+      <div className={showBanner ? "header__banner active" : "header__banner"}>
         <div className="header__banner-left">
           <i className="fa-solid fa-globe"></i>
           <p>LEVENTS LOVES YOU </p>
@@ -79,7 +103,7 @@ const Header = () => {
           </span>
         </div>
       </div>
-      <div className="header__bottom">
+      <div className={showBottom ? "header__bottom active" : "header__bottom"}>
         {listTitle.map((item) => (
           <div className="header__bottom__item" key={item.id}>
             {item.title}
