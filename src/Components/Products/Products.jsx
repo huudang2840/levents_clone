@@ -1,8 +1,8 @@
 import React from "react";
 import "./Products.scss";
 import Button from "../Button/Button";
-import blackTeeFront from "../../img/products/shirt/black-tee-front.jpeg";
-import blackTeeBack from "../../img/products/shirt/black-tee-back.jpeg";
+import { listProduct } from "../../data/productData";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -11,135 +11,24 @@ function Products() {
 
   return (
     <div className="products">
-      <div className="products__item" data-aos="fade-up">
-        <div className="products__item__top">
-          <img src={blackTeeFront} alt="" />
-          <img src={blackTeeBack} alt="" />
+      {listProduct.map((p) => (
+        <div key={p.id} className="products__item" data-aos="fade-up">
+          <div className="products__item__top">
+            <img src={p.imgFront} alt="" />
+            <img src={p.imgBack} alt="" />
 
-          <ul className="products__item__top__color">
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
+            <ul className="products__item__top__color">
+              {p.color.map((c) => (
+                <li style={{ backgroundColor: c }}></li>
+              ))}
+            </ul>
+          </div>
+          <div className="products__item__bottom">
+            <div className="products__item__bottom__name">{p.name}</div>
+            <div className="products__item__bottom__price">{p.price} vnđ</div>
+          </div>
         </div>
-        <div className="products__item__bottom">
-          <div className="products__item__bottom__name">Levents® Color Tee/ Black </div>
-          <div className="products__item__bottom__price">380,000 vnđ</div>
-        </div>
-      </div>
-
-      <div className="products__item" data-aos="fade-up">
-        <div className="products__item__top">
-          <img src={blackTeeFront} alt="" />
-          <img src={blackTeeBack} alt="" />
-
-          <ul className="products__item__top__color">
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
-        </div>
-        <div className="products__item__bottom">
-          <div className="products__item__bottom__name">Levents® Color Tee/ Black </div>
-          <div className="products__item__bottom__price">380,000 vnđ</div>
-        </div>
-      </div>
-      <div className="products__item" data-aos="fade-up">
-        <div className="products__item__top">
-          <img src={blackTeeFront} alt="" />
-          <img src={blackTeeBack} alt="" />
-
-          <ul className="products__item__top__color">
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
-        </div>
-        <div className="products__item__bottom">
-          <div className="products__item__bottom__name">Levents® Color Tee/ Black </div>
-          <div className="products__item__bottom__price">380,000 vnđ</div>
-        </div>
-      </div>
-      <div className="products__item" data-aos="fade-up">
-        <div className="products__item__top">
-          <img src={blackTeeFront} alt="" />
-          <img src={blackTeeBack} alt="" />
-
-          <ul className="products__item__top__color">
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
-        </div>
-        <div className="products__item__bottom">
-          <div className="products__item__bottom__name">Levents® Color Tee/ Black </div>
-          <div className="products__item__bottom__price">380,000 vnđ</div>
-        </div>
-      </div>
-      <div className="products__item" data-aos="fade-up">
-        <div className="products__item__top">
-          <img src={blackTeeFront} alt="" />
-          <img src={blackTeeBack} alt="" />
-
-          <ul className="products__item__top__color">
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
-        </div>
-        <div className="products__item__bottom">
-          <div className="products__item__bottom__name">Levents® Color Tee/ Black </div>
-          <div className="products__item__bottom__price">380,000 vnđ</div>
-        </div>
-      </div>
-      <div className="products__item" data-aos="fade-up">
-        <div className="products__item__top">
-          <img src={blackTeeFront} alt="" />
-          <img src={blackTeeBack} alt="" />
-
-          <ul className="products__item__top__color">
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
-        </div>
-        <div className="products__item__bottom">
-          <div className="products__item__bottom__name">Levents® Color Tee/ Black </div>
-          <div className="products__item__bottom__price">380,000 vnđ</div>
-        </div>
-      </div>
-      <div className="products__item" data-aos="fade-up">
-        <div className="products__item__top">
-          <img src={blackTeeFront} alt="" />
-          <img src={blackTeeBack} alt="" />
-
-          <ul className="products__item__top__color">
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
-        </div>
-        <div className="products__item__bottom">
-          <div className="products__item__bottom__name">Levents® Color Tee/ Black </div>
-          <div className="products__item__bottom__price">380,000 vnđ</div>
-        </div>
-      </div>
-      <div className="products__item" data-aos="fade-up">
-        <div className="products__item__top">
-          <img src={blackTeeFront} alt="" />
-          <img src={blackTeeBack} alt="" />
-
-          <ul className="products__item__top__color">
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
-        </div>
-        <div className="products__item__bottom">
-          <div className="products__item__bottom__name">Levents® Color Tee/ Black </div>
-          <div className="products__item__bottom__price">380,000 vnđ</div>
-        </div>
-      </div>
+      ))}
 
       <Button
         btnText={"Xem thêm"}

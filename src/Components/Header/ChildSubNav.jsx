@@ -1,27 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { spShirt, spBottom, spJacket, spAC, spBTS, bvKL } from "../../data/childSubNavData";
 
 ChildSubNav.propTypes = {
   id: PropTypes.string,
 };
-const spShirt = [
-  { id: "sp-shirt-thun", title: "Áo thun", child: true },
-  { id: "sp-shirt-polo", title: "Áo Polo" },
-  { id: "sp-shirt-somi", title: "Áo sơ mi" },
-];
-
-// const spShirtThun = [
-//   { id: "sp-shirt-thun-tron", title: "Áo thun trơn" },
-//   { id: "sp-shirt-thun-hinh", title: "Áo thun hình" },
-// ];
-// const spBottom = [
-//   { id: "sp-bottom-long", title: "Quần dài" },
-//   { id: "sp-bottom-short", title: "Quần ngắn" },
-// ];
-// const spJacket = [
-//   { id: "sp-jacket-long", title: "Quần dài" },
-//   { id: "sp-jacket-short", title: "Quần ngắn" },
-// ];
 
 function ChildSubNav(props) {
   const { id } = props;
@@ -30,12 +13,25 @@ function ChildSubNav(props) {
     case "sp-shirt":
       myArray = spShirt;
       break;
-
+    case "sp-bottom":
+      myArray = spBottom;
+      break;
+    case "sp-jacket":
+      myArray = spJacket;
+      break;
+    case "sp-ac":
+      myArray = spAC;
+      break;
+    case "sp-bts":
+      myArray = spBTS;
+      break;
+    case "bv-knowledge":
+      myArray = bvKL;
+      break;
     default:
       myArray = [];
       break;
   }
-  // console.log(myArray);
   return (
     <ul className="header__bottom__item__second" style={{ left: "105%", top: "-200%" }}>
       {myArray.map((s) => (

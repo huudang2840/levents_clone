@@ -1,32 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 import ChildSubNav from "./ChildSubNav";
+import { subSP, subPost, subCSKH } from "../../data/subNavData";
 
 SubNav.propTypes = {
   id: PropTypes.string,
 };
-
-const subSP = [
-  { id: "sp-all", title: "Tất cả" },
-  { id: "sp-new", title: "Sản phẩm mới" },
-  { id: "sp-shirt", title: "Áo", child: true },
-  { id: "sp-bottom", title: "Quần", child: true },
-  { id: "sp-jacket", title: "Áo khoác", child: true },
-  { id: "sp-bag", title: "Cặp sách" },
-  { id: "sp-ac", title: "Phụ kiện", child: true },
-  { id: "sp-bts", title: "Bts", child: true },
-];
-
-const subPost = [
-  { id: "bv-trends", title: "Xu hướng thời trang" },
-  { id: "bv-knowledge", title: "Kiến thức thời trang", child: true },
-];
-
-const subCSKH = [
-  { id: "cskh-fabric", title: "Lì Ve Fabric" },
-  { id: "cskh-ez", title: "Mua hàng dễ dàng" },
-];
-// const list = [subSP, subPost, subCSKH];
 
 function SubNav(props) {
   const { id } = props;
