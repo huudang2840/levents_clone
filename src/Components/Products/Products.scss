@@ -4,8 +4,7 @@ $color-gray: #858585;
 .products {
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
-  padding: 0 10px;
+  padding: 0 20px;
   justify-content: center;
   &__item {
     width: 25%;
@@ -25,7 +24,7 @@ $color-gray: #858585;
         display: none;
       }
       &:hover img:nth-child(2) {
-        animation: flash 1s;
+        animation: flash 0.3s ease-in;
         display: block;
       }
 
@@ -63,5 +62,13 @@ $color-gray: #858585;
   }
   100% {
     opacity: 1;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .products {
+    &__item {
+      width: 50%;
+    }
   }
 }

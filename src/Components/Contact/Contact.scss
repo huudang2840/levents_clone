@@ -12,7 +12,7 @@ $color-gray-light: #c0bebe;
   &__right {
     flex: 1;
     height: 100%;
-    padding: 0 10px;
+    padding: 0 20px 0 10px;
 
     h1 {
       font-family: SVNFuturaRegular;
@@ -72,5 +72,42 @@ $color-gray-light: #c0bebe;
 
   &:hover {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .contact {
+    margin-top: 300px;
+    flex-direction: column-reverse;
+    &__right {
+      padding: 0 200px;
+    }
+    &__map {
+      margin-top: 100px;
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .contact {
+    &__right {
+      padding: 0 50px;
+    }
+    &__map {
+      width: 95% !important;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .contact {
+    margin-top: 280px;
+    flex-direction: column-reverse;
+    &__right {
+      padding: 0 20px;
+    }
+    &__map {
+      width: 90% !important;
+    }
   }
 }

@@ -3,11 +3,15 @@ import "./Products.scss";
 import Button from "../Button/Button";
 import blackTeeFront from "../../img/products/shirt/black-tee-front.jpeg";
 import blackTeeBack from "../../img/products/shirt/black-tee-back.jpeg";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function Products() {
+  AOS.init({});
+
   return (
     <div className="products">
-      <div className="products__item">
+      <div className="products__item" data-aos="fade-up">
         <div className="products__item__top">
           <img src={blackTeeFront} alt="" />
           <img src={blackTeeBack} alt="" />
@@ -24,7 +28,7 @@ function Products() {
         </div>
       </div>
 
-      <div className="products__item">
+      <div className="products__item" data-aos="fade-up">
         <div className="products__item__top">
           <img src={blackTeeFront} alt="" />
           <img src={blackTeeBack} alt="" />
@@ -40,8 +44,7 @@ function Products() {
           <div className="products__item__bottom__price">380,000 vnđ</div>
         </div>
       </div>
-
-      <div className="products__item">
+      <div className="products__item" data-aos="fade-up">
         <div className="products__item__top">
           <img src={blackTeeFront} alt="" />
           <img src={blackTeeBack} alt="" />
@@ -57,7 +60,7 @@ function Products() {
           <div className="products__item__bottom__price">380,000 vnđ</div>
         </div>
       </div>
-      <div className="products__item">
+      <div className="products__item" data-aos="fade-up">
         <div className="products__item__top">
           <img src={blackTeeFront} alt="" />
           <img src={blackTeeBack} alt="" />
@@ -73,7 +76,7 @@ function Products() {
           <div className="products__item__bottom__price">380,000 vnđ</div>
         </div>
       </div>
-      <div className="products__item">
+      <div className="products__item" data-aos="fade-up">
         <div className="products__item__top">
           <img src={blackTeeFront} alt="" />
           <img src={blackTeeBack} alt="" />
@@ -89,7 +92,7 @@ function Products() {
           <div className="products__item__bottom__price">380,000 vnđ</div>
         </div>
       </div>
-      <div className="products__item">
+      <div className="products__item" data-aos="fade-up">
         <div className="products__item__top">
           <img src={blackTeeFront} alt="" />
           <img src={blackTeeBack} alt="" />
@@ -105,7 +108,7 @@ function Products() {
           <div className="products__item__bottom__price">380,000 vnđ</div>
         </div>
       </div>
-      <div className="products__item">
+      <div className="products__item" data-aos="fade-up">
         <div className="products__item__top">
           <img src={blackTeeFront} alt="" />
           <img src={blackTeeBack} alt="" />
@@ -121,7 +124,7 @@ function Products() {
           <div className="products__item__bottom__price">380,000 vnđ</div>
         </div>
       </div>
-      <div className="products__item">
+      <div className="products__item" data-aos="fade-up">
         <div className="products__item__top">
           <img src={blackTeeFront} alt="" />
           <img src={blackTeeBack} alt="" />

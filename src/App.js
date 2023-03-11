@@ -12,8 +12,12 @@ function App() {
     <div className="App">
       <Header />
       <Banner />
+      <h1 className="title">SẢN PHẨM NỔI BẬT CỦA LEVENTS®</h1>
       <Products />
+      <h1 className="title">CÁCH CHÚNG TÔI TẠO RA 1 TRIỆU CHIẾC ÁO THUN</h1>
+
       <BannerVideo />
+      <h1 className="title">BỘ PHỐI CỦA LEVENTS</h1>
       <Outfit />
       <Contact />
       <Footer />

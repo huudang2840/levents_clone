@@ -51,6 +51,8 @@ const listTitle = [
 const Header = () => {
   const [showBanner, setShowBanner] = useState(true);
   const [showBottom, setShowBottom] = useState(true);
+  const [showNavbar, setShowNavbar] = useState(false);
+
   let lastScrollPosition = window.pageYOffset;
 
   const scrollShowBanner = () => {
@@ -70,12 +72,19 @@ const Header = () => {
     }
   };
 
+  const handleCheckBox = (e) => {
+    if (e.target.checked) {
+      setShowNavbar(true);
+    } else {
+      setShowNavbar(false);
+    }
+  };
   window.addEventListener("scroll", scrollShowBanner);
   window.addEventListener("scroll", scrollShowBottom);
 
   return (
-    <div className="header">
-      <div className={showBanner ? "header__banner active" : "header__banner"}>
+    <div className={showBanner ? "header active" : "header"}>
+      <div className="header__banner">
         <div className="header__banner-left">
           <i className="fa-solid fa-globe"></i>
           <p>LEVENTS LOVES YOU </p>
@@ -86,7 +95,19 @@ const Header = () => {
         </div>
       </div>
       <div className="header__top">
-        <div className="header__top--left"></div>
+        <div className="header__top--left">
+          <div>
+            <input type="checkbox" id="menu_checkbox" onChange={handleCheckBox} />
+            <label for="menu_checkbox">
+              <div></div>
+              <div></div>
+              <div></div>
+            </label>
+          </div>
+
+          <img src={icSearch} alt="" />
+        </div>
+
         <div className="header__top--center ">
           <a href="/">
             <img src={logo} alt="" srcset="" />
@@ -95,12 +116,44 @@ const Header = () => {
         <div className="header__top--right">
           <span>
             <IconQuality img={icNoti} quality={1} />
-            <a href="/">Sản phẩm yêu thích </a>
-            <img src={icSearch} alt="" />
+            <a className="rs__hide" href="/">
+              Sản phẩm yêu thích{" "}
+            </a>
+            <img className="rs__hide" src={icSearch} alt="" />
             <IconQuality img={icCart} quality={0} />
             <img src={icUser} alt="" />
-            <img src={icVN} alt="" />
+            <img className="rs__hide" src={icVN} alt="" />
           </span>
+        </div>
+        <div className={showNavbar ? "navbar show__navbar" : "navbar"}>
+          <ul className="navbar__left">
+            {listTitle.map((item) => (
+              <li className="header__bottom__item " key={item.id}>
+                {item.title}
+
+                {item.secondTitle ? (
+                  <i
+                    className="fas fa-angle-down icon__dropdown"
+                    style={{ color: "#858585", marginLeft: "8px", marginTop: "2px" }}
+                  ></i>
+                ) : (
+                  <div className="header__bottom__item--after"></div>
+                )}
+              </li>
+            ))}
+            <li style={{ borderBottom: "none" }}></li>
+            <li className="navbar__left--love">
+              <a href="/">Sản phẩm yêu thích</a>
+            </li>
+            <li>
+              <a href="/">Account</a>
+            </li>
+            <li>
+              <a href="/">Langue: Tiếng Việt</a>
+            </li>
+          </ul>
+
+          <div className="navbar__right"> a</div>
         </div>
       </div>
       <div className={showBottom ? "header__bottom active" : "header__bottom"}>

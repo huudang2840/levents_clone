@@ -105,3 +105,37 @@
     font-family: SVNFuturaHeavy;
   }
 }
+
+@media screen and (max-width: 1200px) {
+  .footer {
+    flex-wrap: wrap;
+    &__about {
+      flex: 100%;
+      margin-bottom: 30px;
+    }
+  }
+  .term {
+    margin-top: 50px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .footer {
+    padding-bottom: 30px;
+    &__about {
+      flex: 35%;
+      margin-bottom: 30px;
+    }
+
+    &__store {
+      margin-top: 150px;
+      flex: 100%;
+      &__icon {
+        justify-content: center;
+      }
+    }
+  }
+  .term {
+    margin-top: 0;
+  }
+}

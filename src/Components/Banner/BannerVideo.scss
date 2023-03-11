@@ -23,3 +23,15 @@ $color-black: #000000;
     z-index: 1;
   }
 }
+
+@media screen and (max-width: 750px) {
+  .banner-vd {
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .banner-vd {
+    height: 100%;
+  }
+}
