@@ -50,7 +50,7 @@ export const listOutfit = [
   {
     id: 6,
     imgF: outFit7F,
-    imgB: outFit7F,
+    imgB: outFit7B,
     name: "LEVENTS® | DORAEMON KNIT SWEATER/ PINK",
   },
 ];
